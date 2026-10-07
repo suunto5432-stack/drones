@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0b1416;
+  --panel: #121c1f;
+  --paper: #e7eeef;
+  --mute: #8a9a9e;
+  --stroke: #243338;
+  --amber: #e8a54b;
+  --alert: #d45a3a;
+  --ok: #3dba8b;
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.cmd {
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--stroke);
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 13px;
+  text-align: left;
+}
+
+.cmd:hover:not(:disabled) {
+  border-color: var(--amber);
+}
+
+.cmd-alert {
+  border-color: var(--alert);
+  color: var(--alert);
+}
